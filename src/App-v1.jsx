@@ -16,7 +16,6 @@ export class App extends Component {
     isLoading: false,
     displayLocation: "",
     weather: {},
-    count: 0,
   };
 
   componentDidMount() {
@@ -76,15 +75,6 @@ export class App extends Component {
   render() {
     return (
       <div className="app">
-        <button
-          onClick={() =>
-            this.setState((curState) => {
-              return { count: curState.count + 1 };
-            })
-          }
-        >
-          {this.state.count}
-        </button>
         <h1>Class Weather</h1>
         <Input state={this.state.location} onSetLocation={this.setLocation} />
         {/* <button onClick={this.fetchWeather}>Get Weather</button> */}
